@@ -1,0 +1,14 @@
+.bg-white{
+    color: white;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+nav li{
+    padding: 0 10px;
+    color:grey;
+    display: inline-block;
+}
