@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin:0;
+}
+
 .bg-white{
     color: white;
 }
@@ -5,10 +10,16 @@ nav{
     display: flex;
     justify-content: space-between;
     position: fixed;
-    width: 100%;
+    width: 100%;    
+    height:100%
 }
 nav li{
     padding: 0 10px;
     color:grey;
-    display: inline-block;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .nav-item:not(:last-child) {
+        margin-right: .5rem;
+    }
 }

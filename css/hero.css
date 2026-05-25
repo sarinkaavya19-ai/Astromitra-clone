@@ -1,0 +1,153 @@
+.bg-soft-pink {
+    background: linear-gradient(to right, #fff7f9, #fdeef2)
+}
+
+.grid-card {
+    background-color: #fff;
+    border: 1px solid #ff9800;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform .2s
+}
+
+.grid-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2)
+}
+
+.grid-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px
+}
+
+.grid-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500
+}
+
+fieldset {
+    border: 2px solid #007bff !important;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .05);
+    transition: .3s
+}
+
+fieldset .nav-pills .nav-link,
+legend {
+    border-radius: 5px;
+    background-color: #fff
+}
+
+fieldset:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .1)
+}
+
+fieldset .nav-pills .nav-link {
+    padding: 6px 12px;
+    font-size: .9rem;
+    margin: 0 1px;
+    font-weight: 600;
+    transition: .3s
+}
+
+legend {
+    font-size: 1rem;
+    color: #007bff;
+    padding: 0 10px;
+    font-weight: 600
+}
+
+.nav-pills .nav-link {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 25px;
+    font-weight: 500;
+    color: #555;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+    transition: .3s
+}
+
+.nav-pills .nav-link.active {
+    background-color: #f28c38;
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 123, 255, .3)
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+    background-color: #e9ecef;
+    color: #007bff;
+    transform: translateY(-2px)
+}
+
+.nav-pills .nav-link.active:hover {
+    background-color: #f28c38;
+    color: #fff;
+    transform: translateY(-2px)
+}
+
+.tab-pane {
+    transition: opacity .3s
+}
+
+.tab-pane.fade:not(.show) {
+    opacity: 0
+}
+
+.tab-pane.show {
+    opacity: 1
+}
+
+.d-flex img {
+    border: none;
+    transition: transform .3s
+}
+
+.d-flex:hover img {
+    transform: scale(1.1)
+}
+
+.text-primary {
+    color: #007bff !important
+}
+
+.text-muted {
+    font-size: .9rem
+}
+
+a.text-primary:hover {
+    text-decoration: underline;
+    color: #0056b3 !important
+}
+
+.valentine-vibe {
+    background: linear-gradient(to right, #fceff9, #e0f7fa);
+    color: #444;
+}
+
+.pink-light {
+    background-color: #fff0f5;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.numerology-calculator {
+
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    color: #2e2e2e;
+
+}
