@@ -1,25 +1,144 @@
-*{
-    padding: 0;
-    margin:0;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-.bg-white{
-    color: white;
+:root {
+    --bg-page: #f8f8fb;
+    --bg-surface: #ffffff;
+    --text-primary: #111827;
+    --text-secondary: #5f6570;
+    --primary: #7B68EE;
+    --accent: #FFD700;
+    --accent-soft: #ffaf7b;
+    --border: rgba(16, 24, 40, 0.08);
+    --shadow: 0 25px 80px rgba(0, 0, 0, 0.08);
+    --hero-start: #3a1c71;
+    --hero-middle: #d76d77;
+    --hero-end: #ffaf7b;
+    --radius: 1rem;
+    --container-width: 1200px;
 }
-nav{
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+    background: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+.container {
+    width: min(100% - 2rem, var(--container-width));
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-light {
+    background-color: #f8f9fa;
+}
+
+.section-title {
+    max-width: 720px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 1rem;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.d-flex {
     display: flex;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;    
-    height:100%
-}
-nav li{
-    padding: 0 10px;
-    color:grey;
 }
 
-@media (min-width: 992px) {
-    .navbar-expand-lg .nav-item:not(:last-child) {
-        margin-right: .5rem;
+.align-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-2 {
+    gap: 1rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: min(100% - 1.5rem, 100%);
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .px-4 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-card {
+        padding: 1.5rem;
+    }
+
+    .nav-items ul {
+        flex-wrap: wrap;
+        gap: 0.75rem;
     }
 }

@@ -1,26 +1,23 @@
-/* dark mode theme button*/
+/* Global theme variables */
 :root {
   --bg-color: #ffffff;
   --text-color: #1a1a1a;
   --toggle-bg: #f0f0f0;
 }
 
-/* Variables when dark mode class is applied */
 html.dark-mode {
   --bg-color: #121212;
   --text-color: #f5f5f5;
   --toggle-bg: #333333;
 }
 
-/* Apply variables */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: Muli, sans-serif;
+  font-family: 'Muli', sans-serif;
 }
 
-/* Button Styling */
 #theme-toggle {
   background: var(--toggle-bg);
   border: none;
@@ -33,7 +30,6 @@ body {
   transition: background 0.3s ease;
 }
 
-/* Show/Hide icons based on theme */
 html.dark-mode .moon-icon {
   display: none;
 }
@@ -42,70 +38,112 @@ html:not(.dark-mode) .sun-icon {
   display: none;
 }
 
-/* Icon colors matching text */
 #theme-toggle svg {
   stroke: var(--text-color);
 }
 
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--bg-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
 .nav-bar {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 67px;
+  padding: 0 1rem;
   border: 1px var(--bg-color) solid;
   background-color: var(--bg-color);
   transition: background-color 0.3s ease, color 0.3s ease;
-  justify-content: center;
-  position: fixed;
-  width: 100%;
-  height: 67px;
-  margin: 0;
-  padding: 0 7px 7px 0px;
   cursor: pointer;
-  border-color: black;
-  align-items: center;
 }
 
-.nav-bar ul li {
+.nav-brand .logo img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+.nav-items ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-items ul li {
   display: inline-block;
-  justify-content: left;
   color: #51596c;
   font-size: 16px;
-  padding: 0 10px;
-  text-decoration: none;
-  font-weight: 400;
+  padding: 0 12px;
   font-weight: 545;
-  margin-bottom: inherit;
 }
 
-ul li:hover {
+.nav-items ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-items ul li:hover {
   color: green;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
-.logo {
-  padding: 6px 138px 2px 87px;
-}
-
-.toggle-btn {
-  padding: 5px 0px 0px 210px;
-}
-
-.login-btn {
+.login-link {
   font-size: large;
-}
-
-.login-btn button {
-  display: inline-block;
-  padding: 0.4rem .8rem;
-  font-weight: 400;
+  padding: 0.4rem 0.8rem;
   border: 1px solid #023e81;
   color: #023e81;
   border-radius: .25rem;
-  font-size: inherit;
+  text-decoration: none;
   transition: all .2s ease;
 }
 
-.login-btn button:hover {
+.login-link:hover {
   background: #ffc107;
   color: #212529;
 }
 
+.theme-toggle {
+  width: 48px;
+  height: 48px;
+  background: var(--toggle-bg);
+  border: none;
+  border-radius: 50%;
+}
+
+.sun-icon,
+.moon-icon {
+  width: 20px;
+  height: 20px;
+}
+
+html.dark-mode {
+  --bg-color: #0f172a;
+  --text-color: #f8fafc;
+  --toggle-bg: #1f2937;
+}
+
+html.dark-mode .site-header {
+  background: rgba(15, 23, 42, 0.95);
+  border-color: rgba(148, 163, 184, 0.16);
+}
+
+html.dark-mode .nav-items a,
+html.dark-mode .login-link {
+  color: #cbd5e1;
+}
+
+html.dark-mode .login-link {
+  border-color: rgba(255, 215, 0, 0.35);
+  color: #ffd700;
+}
