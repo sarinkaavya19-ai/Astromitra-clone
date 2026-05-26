@@ -340,8 +340,7 @@ html.dark-mode .login-link {
   }
   .policy-links{
     margin-top: 1rem;
-  }
-}
+  }}
 .company-credit{
   position: relative; 
 z-index: 10; 
