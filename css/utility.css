@@ -28,10 +28,16 @@ html {
 body {
     margin: 0;
     font-family: 'Muli', sans-serif;
-    background: var(--bg-page);
+    background-color: var(--bg-page);
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
+    background-image: url('../assets/Rotating Round Frame with Zodiac Signs_ Colorful Constellations on Starry Night Background_.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #0f172a;
 }
 
 img,
