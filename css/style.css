@@ -65,16 +65,17 @@ html:not(.dark-mode) .sun-icon {
   width: 100%;
   height: 67px;
   padding: 0 1rem;
-  border: 1px var(--bg-color) solid;
-  background-color: var(--bg-color);
+  border: 1px none var(--bg-color) solid;
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
 }
 
-.nav-brand .logo img {
+.nav-brand .logo{
   height: 42px;
   width: auto;
-  display: block;
+  color: rgb(230, 195, 100);
+  font-size: 1.7rem;
+  font-family: "Lovalina", "Cinzel Decorative", serif;
 }
 
 .nav-items ul {
@@ -94,14 +95,12 @@ html:not(.dark-mode) .sun-icon {
 }
 
 .nav-items ul li a {
-  color: inherit;
+  color: #b0b6c5;
   text-decoration: none;
 }
 
-.nav-items ul li:hover {
-  color: green;
-  font-weight: bold;
-  transition: color 0.3s ease;
+.nav-items ul li a:hover {
+  color: rgb(230, 195, 100);
 }
 
 .login-link {
@@ -116,120 +115,47 @@ html:not(.dark-mode) .sun-icon {
 
 .login-link:hover {
   background: #ffc107;
-  color: #212529;
 }
 
-.theme-toggle {
-  width: 48px;
-  height: 48px;
-  background: var(--toggle-bg);
-  border: none;
-  border-radius: 50%;
+
+.about-sec{
+  font-size: 52px;
+  padding: 30px;
+  font-family: --ff;
 }
 
-.sun-icon,
-.moon-icon {
-  width: 20px;
-  height: 20px;
+.about{
+  color:var(--text-color);
+  display: flex;
+  border: #526388 1px solid;
+  border-radius: 25px;
+  padding: 40px;
+  background-color: var(--bg-color);
+  opacity: 0.9;
+  font-size:larger;
 }
 
-html.dark-mode {
-  --bg-color: #0f172a;
-  --text-color: #f8fafc;
-  --toggle-bg: #1f2937;
+html:not(.dark-mode) .glow{
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
-html.dark-mode .site-header {
-  background: rgba(15, 23, 42, 0.95);
-  border-color: rgba(148, 163, 184, 0.16);
+html:not(.dark-mode) .glow:hover{
+  color:#023e81;
+  text-shadow: 0 0 8px rgba(86, 103, 195, 0.834), 0 0 15px rgba(191, 185, 185, 0.632);
 }
 
-html.dark-mode .nav-items a,
-html.dark-mode .login-link {
-  color: #cbd5e1;
+
+.hero-copy {
+  font-size:7vh;
+  font-family: --ff;
 }
 
-html.dark-mode .login-link {
-  border-color: rgba(255, 215, 0, 0.35);
-  color: #ffd700;
+
+.s1 ul {
+  list-style-type: none;
 }
 
-/*** Responsive Navigation */
-.menu-icon,
-.close-icon {
-    font-size: 25px;
-    color: var(--text-color);
-    margin-right: 0;
-    padding: 0 10px;
-    cursor: pointer;
-    display: none;
-}
-
-@media only screen and (max-width: 700px) {
-    .nav-items > #nav-list {
-        display: none;
-        width: 100%;
-        background-color: var(--toggle-bg);
-        position: absolute;
-        top: 67px;
-        left: 0;
-        text-align: center;
-        color: var(--text-color);
-    }
-    .nav-items > #nav-list li {
-        display: block;
-        margin: 20px 0;
-    }
-    .menu-icon {
-        display: block;
-    }
-}
-/**container tag*/
-.container-tag{
-  background-color: #0f172a;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 4rem 3rem;
-  width: 100%;
-  margin-top: 6rem;
-  position: relative;
-  overflow: hidden;
-}
-.bg-glow{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 8rem;
-  pointer-events: none;
-  background: linear-gradient(rgba(87, 58, 129, 0.12) 0%, rgba(201, 168, 76, 0.05) 50%, transparent 100%);
-  z-index: 1;
-}
-.responsive-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-}
-.brand-bio {
-  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1); 
-  margin-top: calc(1.5rem * calc(1 - 0)); 
-  margin-bottom: calc(1.5rem * 0);
-}
-.name{
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; 
-  font-size: 1.5rem; 
-  line-height: 2rem; 
-  color: rgb(230,195,100);
-}
-.text{
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; 
-  font-size: 0.875rem; 
-  line-height: 1.625; 
-  color: rgb(148,163,184);
-}
 /* 1. Container and its baseline transformation setup */
 .animated-links {
   /* Set a clean baseline margin instead of the complex calc() formulas */
@@ -281,10 +207,8 @@ html.dark-mode .login-link {
 
 /* TRIGGER: What happens when you hover over the link */
 .glow:hover {
-  color: rgb(255, 255, 255); /* Turns bright white */
-  /* This creates an actual visual cosmic "glow" shadow */
+  color: rgb(255, 255, 255); 
   text-shadow: 0 0 8px rgba(201, 168, 76, 0.6), 0 0 15px rgba(255, 255, 255, 0.3);
-  transform: translateX(4px); /* Moves individual link slightly right on hover */
 }
 .icons{
   display: flex;
@@ -338,6 +262,7 @@ html.dark-mode .login-link {
   color: inherit;
   text-decoration: none;
 }
+
 @media (max-width: 700px) {
   .legal-info{
     flex-direction: column;
@@ -347,12 +272,15 @@ html.dark-mode .login-link {
   .policy-links{
     margin-top: 1rem;
   }}
+
 .company-credit{
   position: relative; 
-z-index: 10; 
-margin-top: 1rem; 
-width: 100%; 
-text-align: center;}
+  z-index: 10; 
+  margin-top: 1rem; 
+  width: 100%; 
+  text-align: center;
+}
+
 .company-credit .credit-text {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; 
 font-size: 10px; 
