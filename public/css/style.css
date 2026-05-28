@@ -469,3 +469,29 @@ html:not(.dark-mode) .glow:hover {
   background-color: var(--text-primary--);
   transform: scale(1.1);
 }
+.contact-section {
+  margin: 8rem auto 0;
+  max-width: 40rem;
+  padding: 0 1rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-subtle--);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.contact-info{
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.contact-input{
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-subtle--);
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
