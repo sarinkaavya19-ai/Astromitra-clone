@@ -110,11 +110,6 @@ legend {
 
 .d-flex img {
     border: none;
-    transition: transform .3s
-}
-
-.d-flex:hover img {
-    transform: scale(1.1)
 }
 
 .text-primary {

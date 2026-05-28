@@ -4,15 +4,10 @@
   --text-color: #1a1a1a;
   --toggle-bg: #f0f0f0;
   --text-primary--: #e6c364;
-  /* The main theme gold color */
   --on-primary--: #1e1b4b;
-  /* Dark text color used inside elements */
   --surface-container--: #0f111a;
-  /* Deep card dark background */
   --text-variant--: #94a3b8;
-  /* Muted slate gray description text */
   --border-subtle--: rgba(255, 255, 255, 0.05);
-  /* Soft 5% white border line */
 }
 
 html.dark-mode {
@@ -136,7 +131,10 @@ html:not(.dark-mode) .sun-icon {
   padding: 40px;
   background-color: var(--bg-color);
   opacity: 0.9;
+  border-bottom-width: thick;
+  max-width: 1001px;
   font-size: larger;
+  margin-left:5rem;
 }
 
 html:not(.dark-mode) .glow {
@@ -158,6 +156,44 @@ html:not(.dark-mode) .glow:hover {
 
 .s1 ul {
   list-style-type: none;
+}
+/* Center Section */
+.s2 {
+    flex-direction: column;
+    position: relative;
+}
+
+/* OUR SERVICES heading */
+.s2 h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Golden line below heading */
+.s2 h1::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    margin: 18px auto 0;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #FFD700,
+        transparent
+    );
+    border-radius: 50px;
+}
+
+/* Optional subtitle styling */
+.s2 span {
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 /* 1. Container and its baseline transformation setup */

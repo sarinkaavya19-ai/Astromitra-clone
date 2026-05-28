@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="css/utility.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/hero-section.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
@@ -28,8 +31,8 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#KG">Kundli Generator</a></li>
-                    <li><a href="#Shop">Shop</a></li>
-                    <li><a href="#Contact">Contact</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <li><a class="login-link" href="#">Login</a></li>
                     <li>
                         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
@@ -58,8 +61,8 @@
 
     <main class="main-content">
         <section class="hero-bg">
-            <div class="container hero-grid">
-                <div >
+            <div class="container hero-grid justify-center py-5 mb-2 mt-4 d-flex align-center">
+                <div>
                     <span class="eyebrow">Trusted since 2007</span>
                     <h1 class="hero-copy">Elevate Your Spirit With Cosmic Guidance</h1>
 
@@ -90,7 +93,7 @@
                 <div class="col-lg-4 text-center">
                     <img class="img-fluid rounded"
                         src="https://www.astromitra.com/Sassets/img/1200/vedic-astrology-reading.webp"
-                        alt="Professional Vedic astrology birth chart reading consultation" width="400" height="600"
+                        alt="Professional Vedic astrology birth chart reading consultation" width="360px" height="500px"
                         loading="lazy" title="Expert Vedic Astrology Reading Services">
                 </div>
             </div>
@@ -98,8 +101,9 @@
         <section id="about">
             <div class="hero-description container justify-center text-center py-5 gap-2 align-center d-flex">
                 <ul>
-                    <li class="glow d-flex justify-center align-center about-sec">WHERE INNER KNOWING BLOOMS Into LIGHT</li>
-                    <li class="about d-flex">
+                    <li class="glow d-flex justify-center align-center about-sec">WHERE INNER KNOWING BLOOMS Into LIGHT
+                    </li>
+                    <li class="about d-flex justify-center align-center ">
                         MitraAstro was born from a deep reverence for the unseen — a sacred
                         space where the stars speak,
                         and energy flows through artistry. We blend modern mysticism with timeless cosmic knowledge to
@@ -111,12 +115,229 @@
                 </ul>
             </div>
         </section>
-        <section id ="services">
-            <div class="s1 justify-center text-center mt-4 mb-2 py-5 gap-2 container align-center d-flex hero-description">
+        <section id="services">
+            <div
+                class="s1 s2 justify-center text-center mt-4 mb-2 py-5 gap-2 container align-center d-flex hero-description">
                 <ul>
                     <li><span style="color: #FFD700;">MAPPING YOUR JOURNEY</span></li>
-                    <li><h1 style="font-size: 40px;">Our Services</h1></li>
+                    <li>
+                        <h1 style="font-size: 40px;">Our Services</h1>
+                    </li>
                 </ul>
+            </div>
+            <div>
+                <!-- Bootstrap Carousel -->
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+
+                    <div class="carousel-inner">
+
+                        <!-- Card 1 -->
+                        <div class="carousel-item active">
+                            <div class="service-card-wrapper">
+                                <div class="service-card">
+
+                                    <span class="service-badge">
+                                        Foundational Insight
+                                    </span>
+
+                                    <h3 class="service-title">
+                                        Kundli & Birth Chart Reading
+                                    </h3>
+
+                                    <p class="service-description">
+                                        Uncover the karmic blueprint assigned at birth.
+                                        We look beyond basic traits to reveal life purpose
+                                        and timing.
+                                    </p>
+
+                                    <ul class="service-features">
+                                        <li>⭐ Detailed Dosha analysis</li>
+                                        <li>⭐ Mahadasha timeline mapping</li>
+                                    </ul>
+
+                                    <div class="service-footer">
+                                        <div class="service-price">
+                                            <span class="duration">Duration: 45 min</span>
+                                            <span class="price">₹2,501</span>
+                                        </div>
+
+                                        <button class="book-btn">
+                                            Book Now
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="carousel-item">
+                            <div class="service-card-wrapper">
+                                <div class="service-card">
+
+                                    <span class="service-badge">
+                                        Spiritual Guidance
+                                    </span>
+
+                                    <h3 class="service-title">
+                                        Horoscope Consultation
+                                    </h3>
+
+                                    <p class="service-description">
+                                        Gain clarity about career, relationships,
+                                        health, and future opportunities through
+                                        deep astrological insights.
+                                    </p>
+
+                                    <ul class="service-features">
+                                        <li>⭐ Career prediction</li>
+                                        <li>⭐ Relationship compatibility</li>
+                                    </ul>
+
+                                    <div class="service-footer">
+                                        <div class="service-price">
+                                            <span class="duration">Duration: 60 min</span>
+                                            <span class="price">₹3,001</span>
+                                        </div>
+
+                                        <button class="book-btn">
+                                            Book Now
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="carousel-item">
+                            <div class="service-card-wrapper">
+                                <div class="service-card">
+
+                                    <span class="service-badge">
+                                        Love & Connection
+                                    </span>
+
+                                    <h3 class="service-title">
+                                        Matchmaking
+                                    </h3>
+
+                                    <p class="service-description">
+                                        Move toward partnership with clarity.
+                                        We evaluate sync points across emotional,
+                                        intellectual, and karmic levels.
+                                    </p>
+
+                                    <ul class="service-features">
+                                        <li>❤️ Guna Milan (36 Point Check)</li>
+                                        <li>❤️ Synastry chart overlay</li>
+                                    </ul>
+
+                                    <div class="service-footer">
+                                        <div>
+                                            <span class="duration">Duration: 45 min</span>
+                                            <span class="price">₹4,100</span>
+                                        </div>
+
+                                        <button class="book-btn">
+                                            Book Now
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="carousel-item">
+                            <div class="service-card-wrapper">
+                                <div class="service-card">
+
+                                    <span class="service-badge tertiary">
+                                        Energy & Healing
+                                    </span>
+
+                                    <h3 class="service-title">
+                                        Reiki Healing & Poojas
+                                    </h3>
+
+                                    <p class="service-description">
+                                        Harmonize your vibration.
+                                        Ancient ritual meets energy work
+                                        to clear obstacles and invite abundance.
+                                    </p>
+
+                                    <ul class="service-features">
+                                        <li>✨ Distance Reiki sessions</li>
+                                        <li>✨ Custom Vedic rituals</li>
+                                    </ul>
+
+                                    <div class="service-footer">
+                                        <div>
+                                            <span class="duration">Duration: 45 min</span>
+                                            <span class="price">₹2,501</span>
+                                        </div>
+
+                                        <button class="book-btn">
+                                            Book Now
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="carousel-item">
+                            <div class="service-card-wrapper">
+                                <div class="service-card">
+
+                                    <span class="service-badge primary">
+                                        Occult & Guidance
+                                    </span>
+
+                                    <h3 class="service-title">
+                                        Occult Wisdom
+                                    </h3>
+
+                                    <p class="service-description">
+                                        Deep spiritual guidance blending
+                                        Vedic wisdom and occult practices
+                                        to navigate unseen patterns in your life journey.
+                                    </p>
+
+                                    <ul class="service-features">
+                                        <li>🔮 Esoteric pattern reading</li>
+                                        <li>🔮 Soul path alignment</li>
+                                    </ul>
+
+                                    <div class="service-footer">
+                                        <div>
+                                            <span class="duration">Duration: 45 min</span>
+                                            <span class="price">₹2,100</span>
+                                        </div>
+
+                                        <button class="book-btn">
+                                            Book Now
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="prev">
+
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="next">
+
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
             </div>
         </section>
         <!-- Shop -->
@@ -127,11 +348,13 @@
                     <h2 class="headline_font">Spiritual Store</h2>
                 </div>
                 <a href="#" class="transition">VIEW ALL PRODUCTS</a>
-             </div>
-             <div class="scroll-container">
-                 <div class="product_card">
+            </div>
+            <div class="scroll-container">
+                <div class="product_card">
                     <div class="viewport_container">
-                        <img alt="Panchmukhi Rudraksh" class="img_spec" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSvTtLsWrfmOmLetEDMRe7mjgfVugT1uS1AOdYQNQtu-CEeftIb6Rj6TOslWkCW-_xaDmvu2P6uy7xVpWBIavmNlFN4ih68xRNi5qbsNbL-daVWXYJt1nsHgdS9XRNnbkqeF89yimaLGO2sVKeHMj6RP2JRW8Rig6D4J5sp0zqdrSPZ287TXHHr_VNs6PSPiqxM7x3JZi87rO5gplivODGi8LFRkWYkQIGcwCBh9_q5j4cM-2uclyRcoUOmqWubkBTitDmt_lldLM" loading="lazy">
+                        <img alt="Panchmukhi Rudraksh" class="img_spec"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSvTtLsWrfmOmLetEDMRe7mjgfVugT1uS1AOdYQNQtu-CEeftIb6Rj6TOslWkCW-_xaDmvu2P6uy7xVpWBIavmNlFN4ih68xRNi5qbsNbL-daVWXYJt1nsHgdS9XRNnbkqeF89yimaLGO2sVKeHMj6RP2JRW8Rig6D4J5sp0zqdrSPZ287TXHHr_VNs6PSPiqxM7x3JZi87rO5gplivODGi8LFRkWYkQIGcwCBh9_q5j4cM-2uclyRcoUOmqWubkBTitDmt_lldLM"
+                            loading="lazy">
                     </div>
                     <div class="content_details">
                         <h4 class="contentheading">Panchmukhi Rudraksh</h4>
@@ -141,47 +364,53 @@
                             <button class="shopbtn">🛍️</button>
                         </div>
                     </div>
-                 </div>
-                 <div class="product_card">
+                </div>
+                <div class="product_card">
                     <div class="viewport_container">
-                        <img alt="Zodiac Bracelet" class="img_spec" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtVkcw6QyHa1bqAcqkFLBe9Pvjhm3ULcG3i_CGD0pCkorBuCoycXBNAzlFLEzUFFTc__hgMox19dph-043385ADFXUz09-0of-CDwDLeXg-lxsgeFjmmfboANGUEDB9klbH10Nw7TD3izaIOk5OY8jbonE_ioPLViSzy1F4gyDf4_p3n_v-QOXLlA8vXrdiaiSPk9ymBkVk6rRXqrk84y0A5XgnsVVRgfEgKnPlJVwXqW9EZVgSy6QqabFaQU4_NdOtdBsr0EiHHw" loading="lazy">
+                        <img alt="Zodiac Bracelet" class="img_spec"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtVkcw6QyHa1bqAcqkFLBe9Pvjhm3ULcG3i_CGD0pCkorBuCoycXBNAzlFLEzUFFTc__hgMox19dph-043385ADFXUz09-0of-CDwDLeXg-lxsgeFjmmfboANGUEDB9klbH10Nw7TD3izaIOk5OY8jbonE_ioPLViSzy1F4gyDf4_p3n_v-QOXLlA8vXrdiaiSPk9ymBkVk6rRXqrk84y0A5XgnsVVRgfEgKnPlJVwXqW9EZVgSy6QqabFaQU4_NdOtdBsr0EiHHw"
+                            loading="lazy">
                     </div>
                     <div class="content_details">
                         <h4 class="contentheading">Zodiac Bracelet</h4>
-                        <p class="content-text">Wear your cosmic energy — handcrafted bracelet aligned to your zodiac sign</p>
+                        <p class="content-text">Wear your cosmic energy — handcrafted bracelet aligned to your zodiac
+                            sign</p>
                         <div class="pricetypo">
                             <span class="price">₹1,500</span>
                             <button class="shopbtn">🛍️</button>
                         </div>
                     </div>
-                 </div>
-                    <div class="product_card">
-                        <div class="viewport_container">
-                            <img alt="Sphatik Shivling" class="img_spec" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtIZl_805VXb_lcDJ81ficIBuWXQ3ij1Z-nWzYNLwBDBcMMSWM-u9rauHPqk2C-eeNcQqMRxNmbA4ffTHjTngfkf73CffbxJhNytFlN2j-O-PBQLpDFknhSydY58FyBf2NR68zVf5pOsRrq7wkcTJYgafozjp4vbs-UjrYFp-ELcA_Gb-RNzSuH-bpanMnQmoymMu4OVs2jGUtZuprbiNd-E2DkwJAsWMMA14VUVNS_LcJtrPn7uL7UWXNCs1okKTkA-d553CWeSA" loading="lazy">
-                        </div>
-                        <div class="content_details">
-                            <h4 class="contentheading">Sphatik Shivling</h4>
-                            <p class="content-text">Pure crystal Shivling for positive energy, meditation and spiritual awakening</p>
-                            <div class="pricetypo">
-                                    <span class="price">₹751</span>
-                                    <button class="shopbtn">🛍️</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product_card">
-                            <div class="viewport_container">
-                                <img alt="Gemstone" class="img_spec" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtmKhGzAHb2Mq7zs8jDOMmF6kYmnIhbwAA1OQmyU3vfpwu7rhqVRwNGd44NxIDyyUAQ8KOC7d--tnaW6NnMe1bOCkWgowMBBfqyEunBc1X55yJswRdOfgNNYGn54AzdourAYv33c99md8bwiBsmrWGyQq5gZjKv8WqJ1UnT9-47BiroJqCDjRCNaKZPy_3LzL6y99H3tukN8XyQd5e5oJCcPTO0zo36ZpajnN4Tlkfz45VQyt2GGkNjm0jZ07YK6t4EOeHibRDUlU" loading="lazy">
-                            </div>
-                            <div class="content_details">
-                                    <h4 class="contentheading">Gemstone</h4>
-                                    <p class="content-text">Authentic Vedic gemstones prescribed as per your birth chart for planetary harmony</p>
-                                    <div class="pricetypo">
-                                        <span class="price">₹951</span>
-                                        <button class="shopbtn">🛍️</button>
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+                <div class="product_card">
+                    <div class="viewport_container">
+                        <img alt="Sphatik Shivling" class="img_spec"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtIZl_805VXb_lcDJ81ficIBuWXQ3ij1Z-nWzYNLwBDBcMMSWM-u9rauHPqk2C-eeNcQqMRxNmbA4ffTHjTngfkf73CffbxJhNytFlN2j-O-PBQLpDFknhSydY58FyBf2NR68zVf5pOsRrq7wkcTJYgafozjp4vbs-UjrYFp-ELcA_Gb-RNzSuH-bpanMnQmoymMu4OVs2jGUtZuprbiNd-E2DkwJAsWMMA14VUVNS_LcJtrPn7uL7UWXNCs1okKTkA-d553CWeSA"
+                            loading="lazy">
                     </div>
+                    <div class="content_details">
+                        <h4 class="contentheading">Sphatik Shivling</h4>
+                        <p class="content-text">Pure crystal Shivling for positive energy, meditation and spiritual
+                            awakening</p>
+                        <div class="pricetypo">
+                            <span class="price">₹751</span>
+                            <button class="shopbtn">🛍️</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product_card">
+                    <div class="viewport_container">
+                        <img alt="Gemstone" class="img_spec"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtmKhGzAHb2Mq7zs8jDOMmF6kYmnIhbwAA1OQmyU3vfpwu7rhqVRwNGd44NxIDyyUAQ8KOC7d--tnaW6NnMe1bOCkWgowMBBfqyEunBc1X55yJswRdOfgNNYGn54AzdourAYv33c99md8bwiBsmrWGyQq5gZjKv8WqJ1UnT9-47BiroJqCDjRCNaKZPy_3LzL6y99H3tukN8XyQd5e5oJCcPTO0zo36ZpajnN4Tlkfz45VQyt2GGkNjm0jZ07YK6t4EOeHibRDUlU"
+                            loading="lazy">
+                    </div>
+                    <div class="content_details">
+                        <h4 class="contentheading">Gemstone</h4>
+                        <p class="content-text">Authentic Vedic gemstones prescribed as per your birth chart for
+                            planetary harmony</p>
+                        <div class="pricetypo">
+                            <span class="price">₹951</span>
+                            <button class="shopbtn">🛍️</button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -211,7 +440,7 @@
             <div class="animated-links">
                 <h4 class="foot-head">Quick Links</h4>
                 <ul class="itemsfoot">
-                    <li><a href="#" class="glow">About Us</a></li>
+                    <li><a href="#about" class="glow">About Us</a></li>
                     <li><a href="#" class="glow">Careers</a></li>
                     <li><a href="#" class="glow">Astrology Store</a></li>
                     <li><a href="#" class="glow">Blog</a></li>
@@ -259,6 +488,9 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
