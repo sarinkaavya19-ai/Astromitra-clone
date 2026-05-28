@@ -505,130 +505,29 @@ html:not(.dark-mode) .glow:hover {
   background-color: var(--text-primary--);
   transform: scale(1.1);
 }
-/* Carousel spacing */
-#carouselExampleAutoplaying {
-    padding: 0px 0 100px 0;
+.contact-section {
+  margin: 8rem auto 0;
+  max-width: 40rem;
+  padding: 0 1rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-subtle--);
+  border-radius: 1rem;
+  padding: 2rem;
 }
-
-/* Center card */
-.service-card-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contact-info{
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
-
-/* Main Card */
-.service-card {
-    width: 684px;
-    background: rgba(20, 20, 35, 0.9);
-    backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 215, 0, 0.2);
-    border-radius: 24px;
-    padding: 40px;
-    color: white;
-    transition: 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-.service-card:hover {
-    border-color: rgba(255, 215, 0, 0.5);
-}
-
-/* Badge */
-.service-badge {
-    display: inline-block;
-    margin-bottom: 22px;
-    padding: 8px 16px;
-    border-radius: 50px;
-    font-size: 11px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background: rgba(255, 215, 0, 0.12);
-    border: 1px solid rgba(255, 215, 0, 0.3);
-    color: #f5c542;
-}
-
-/* Title */
-.service-title {
-    font-size: 32px;
-    margin-bottom: 18px;
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-/* Description */
-.service-description {
-    font-size: 14px;
-    color: #cfcfcf;
-    margin-bottom: 30px;
-    line-height: 1.7;
-}
-
-/* Features */
-.service-features {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 35px;
-}
-
-.service-features li {
-    margin-bottom: 14px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Footer */
-.service-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 24px;
-}
-
-/* Price */
-.service-price {
-    display: flex;
-    flex-direction: column;
-}
-
-.duration {
-    font-size: 12px;
-    color: #aaaaaa;
-}
-
-.price {
-    font-size: 22px;
-    font-weight: bold;
-    color: #f5c542;
-    margin-top: 4px;
-}
-
-/* Button */
-.book-btn {
-    padding: 12px 24px;
-    border: none;
-    border-radius: 50px;
-    background: linear-gradient(135deg, #f5c542, #ffdf80);
-    color: #111;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.book-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.35);
-}
-
-/* Carousel Icons */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(255,255,255,0.2);
-    border-radius: 50%;
-    padding: 18px;
+.contact-input{
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-subtle--);
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
