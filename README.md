@@ -1,12 +1,12 @@
 # MitraAstro Landing Page Clone
 
-A modern, highly responsive Vedic Astrology landing page platform featuring an elegant glassmorphism UI, dual-theming (Dark/Light mode), and a robust Node.js/Relational Database backend architecture. Built using clean, semantic web standards without external CSS frameworks.
+A modern, highly responsive Vedic Astrology landing page platform featuring an elegant glassmorphism UI, dual-theming (Dark/Light mode), and a robust native Node.js backend architecture. Built using clean, semantic web standards without external CSS frameworks.
 
 ---
 
 ## 🚀 Live Demo & Deployment
 * **Reference Site:** [MitraAstro Netlify](https://mitraastro.netlify.app/)
-* **Deployment Platform:** Netlify (Static Frontend)
+* **Deployment Platform:** Netlify (Static Frontend) / Local Node.js Server
 * **SSL/Security:** Auto-provisioned via Let's Encrypt (HTTP → HTTPS enforced)
 
 ---
@@ -19,7 +19,7 @@ A modern, highly responsive Vedic Astrology landing page platform featuring an e
 * **Typography:** *Noto Serif* (Body & Reports), *Lovalina* / *Cinzel Decorative* (Display & Branding)
 
 ### Backend & Database
-* **Server Environment:** Node.js, Express.js
+* **Server Environment:** Native Node.js (`http`, `fs`, and `path` core modules)
 * **Database:** MySQL / PostgreSQL (ACID-compliant relational storage)
 * **Authentication:** Google OAuth 2.0 Identity Services & JSON Web Tokens (JWT)
 
@@ -30,9 +30,11 @@ A modern, highly responsive Vedic Astrology landing page platform featuring an e
 ### In Scope
 * **Fixed Navigation Bar:** Responsive layout featuring localized dark/light mode toggles and an optimized mobile hamburger menu ($< 700\text{px}$).
 * **Hero Dashboard:** Vibrant linear-gradient design tokens (`#3a1c71` → `#d76d77` → `#ffaf7b`) featuring high-fidelity glassmorphic cards (`backdrop-filter`).
-* **Interactive Core Modules:** * *Kundli Generator:* Dynamic, form-driven interface tracking user birth telemetry (Date, Time, Location).
+* **Interactive Core Modules:** 
+    * *Kundli Generator:* Dynamic, form-driven interface tracking user birth telemetry (Date, Time, Location).
     * *Spiritual E-Commerce Shop:* Product grid interface for curated remedies with placeholder cart state machines.
     * *About & Services:* High-end catalogs detailing Vedic consultation frameworks, profiles, and legacy metrics.
+* **Dynamic Static File Loader:** Custom built-in Node.js asset routing utilizing explicit MIME-type mappings for safe browser rendering.
 * **Authentication Gateway:** Secure Node.js server route processing Google OAuth 2.0 redirects, returning client-side cached JWTs mapped to the `Authorization: Bearer` header.
 
 ### Out of Scope (Phase 1)
@@ -44,17 +46,23 @@ A modern, highly responsive Vedic Astrology landing page platform featuring an e
 
 ## 📂 Project Architecture & CSS File Load Order
 
-To ensure clean separation of concerns and appropriate inheritance overrides, stylesheets must follow this exact compilation structure:
+To support the Node.js static asset compiler, all frontend files live inside the dedicated `public` directory:
 
 ```text
-├── index.html               # Root semantic document & SEO metadata
-├── css/
-│   ├── style.css            # Global themes, typography, & html.dark-mode overrides
-│   ├── utility.css          # Core CSS resets, root design tokens, & layout utility classes
-│   ├── hero.css             # Component classes (pills, cards, global buttons)
-│   └── hero-section.css     # Structural layout grids specific to the Hero section
-└── script.js                # LocalStorage theme caching & mobile DOM navigation scripts
-
+mitraastro/
+├── public/                  # Static frontend files served by Node.js
+│   ├── css/
+│   │   ├── style.css        # Global themes, typography, & html.dark-mode overrides
+│   │   ├── utility.css      # Core CSS resets, root design tokens, & layout utility classes
+│   │   ├── hero.css         # Component classes (pills, cards, global buttons)
+│   │   └── hero-section.css # Structural layout grids specific to the Hero section
+│   ├── js/
+│   │   └── script.js        # LocalStorage theme caching & mobile DOM navigation scripts
+│   └── index.html           # Root semantic document & SEO metadata
+├── app.js                   # Native Node.js HTTP server & routing engine
+├── .gitignore               # Configured to ignore node_modules
+├── package.json             # App scripts and project metadata
+└── README.md
 ```
 
 ---
@@ -70,7 +78,6 @@ Theme checking happens before document render to minimize **Flash of Unstyled Co
 const preferredTheme = localStorage.getItem('theme') || 
   (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 document.documentElement.classList.toggle('dark-mode', preferredTheme === 'dark');
-
 ```
 
 ### 2. Secure Request Loop
@@ -79,14 +86,13 @@ document.documentElement.classList.toggle('dark-mode', preferredTheme === 'dark'
 [Client Form Actions] 
        │
        ▼ (Google OAuth 2.0 Verification)
-[Node.js / Express API Server] 
+[Native Node.js Server Router] 
        │
        ▼ (Issues Signature encrypted JWT)
 [Stored Client-Side: LocalStorage / HttpOnly]
        │
        ▼ (Header Inclusion)
 Authorization: Bearer <token>
-
 ```
 
 ---
@@ -104,16 +110,12 @@ Authorization: Bearer <token>
 ```bash
 git clone https://github.com/Rajal-ui/MitraAstro.git
 cd MitraAstro
-
 ```
-
 
 2. **Install backend dependencies:**
 ```bash
 npm install
-
 ```
-
 
 3. **Environment Configuration:**
 Create a `.env` file in the root directory and add your credentials:
@@ -125,17 +127,17 @@ DB_PASS=your_db_password
 DB_NAME=mitraastro_db
 GOOGLE_CLIENT_ID=your_google_client_id
 JWT_SECRET=your_jwt_encryption_key
-
 ```
-
 
 4. **Run the local development server:**
+To launch with hot-reloading (auto-restarts when you modify files):
+```bash
+npm run dev
+```
+Alternatively, to start the application normally:
 ```bash
 npm start
-
 ```
-
-
 
 ---
 
@@ -150,5 +152,5 @@ npm start
 ## 📝 Document Specifications & Sign-Off
 
 * **Prepared By:** KLN Business Solutions, Pune
-* **Version:** v1.0 (May 2025 specification architecture)
+* **Version:** v1.1 (May 2026 updated architecture)
 * **Status:** Pending Final Review Sign-Off
