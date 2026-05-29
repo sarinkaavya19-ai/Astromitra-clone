@@ -134,7 +134,7 @@ html:not(.dark-mode) .sun-icon {
   border-bottom-width: thick;
   max-width: 1001px;
   font-size: larger;
-  margin-left:5rem;
+  margin-left: 5rem;
 }
 
 html:not(.dark-mode) .glow {
@@ -157,43 +157,42 @@ html:not(.dark-mode) .glow:hover {
 .s1 ul {
   list-style-type: none;
 }
+
 /* Center Section */
 .s2 {
-    flex-direction: column;
-    position: relative;
+  flex-direction: column;
+  position: relative;
 }
 
 /* OUR SERVICES heading */
 .s2 h1 {
-    font-size: 40px;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
 }
 
 /* Golden line below heading */
 .s2 h1::after {
-    content: "";
-    display: block;
-    width: 120px;
-    height: 2px;
-    margin: 18px auto 0;
-    background: linear-gradient(
-        to right,
-        transparent,
-        #FFD700,
-        transparent
-    );
-    border-radius: 50px;
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  margin: 18px auto 0;
+  background: linear-gradient(to right,
+      transparent,
+      #FFD700,
+      transparent);
+  border-radius: 50px;
 }
 
 /* Optional subtitle styling */
 .s2 span {
-    letter-spacing: 4px;
-    font-size: 12px;
-    font-weight: bold;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 /* 1. Container and its baseline transformation setup */
@@ -505,6 +504,7 @@ html:not(.dark-mode) .glow:hover {
   background-color: var(--text-primary--);
   transform: scale(1.1);
 }
+
 .contact-section {
   margin: 8rem auto 0;
   max-width: 40rem;
@@ -515,13 +515,15 @@ html:not(.dark-mode) .glow:hover {
   border-radius: 1rem;
   padding: 2rem;
 }
-.contact-info{
+
+.contact-info {
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-.contact-input{
+
+.contact-input {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid var(--border-subtle--);
