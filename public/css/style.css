@@ -158,6 +158,242 @@ html:not(.dark-mode) .glow:hover {
   list-style-type: none;
 }
 
+/* =========================
+   SERVICES SECTION ONLY
+========================= */
+
+#services {
+  padding: 5rem 1rem;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Carousel spacing */
+#services .carousel {
+  margin-top: 2rem;
+}
+
+/* Center card wrapper */
+.service-card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem 4rem;
+}
+
+/* Main card */
+.service-card {
+  width: 100%;
+  max-width: 720px;
+  background: var(--surface-container--);
+  border: 1px solid var(--border-subtle--);
+  border-radius: 24px;
+  padding: 2.5rem;
+  color: #fff;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.02);
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Badge */
+.service-badge {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: rgba(230, 195, 100, 0.12);
+  color: var(--text-primary--);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+/* Title */
+.service-title {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Description */
+.service-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-variant--);
+  margin-bottom: 1.5rem;
+}
+
+/* Features */
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.service-features li {
+  color: #d8dee9;
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+.service-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Price block */
+.service-price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.duration {
+  font-size: 0.82rem;
+  color: var(--text-variant--);
+  letter-spacing: 0.03em;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary--);
+}
+
+/* Button */
+.book-btn {
+  border: none;
+  outline: none;
+  padding: 0.9rem 1.6rem;
+  border-radius: 12px;
+  background: var(--text-primary--);
+  color: #111827;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+/* SERVICES CAROUSEL ARROWS */
+
+#services .carousel-control-prev,
+#services .carousel-control-next {
+  opacity: 1;
+  width: 8%;
+}
+
+/* Arrow icon styling */
+#services .carousel-control-prev-icon,
+#services .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 1.5rem;
+  background-size: 55%;
+  filter: invert(1);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+#services .carousel-control-prev:hover .carousel-control-prev-icon,
+#services .carousel-control-next:hover .carousel-control-next-icon {
+  background-color: rgba(230, 195, 100, 0.9);
+  transform: scale(1.08);
+}
+/* =========================
+   SERVICES GLOW EXTENSION
+========================= */
+
+/* ONLY BORDER GLOW */
+
+#services .service-card.glow1 {
+  border: 1px solid rgba(230, 195, 100, 0.25);
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+#services .service-card.glow1:hover {
+  border-color: rgba(230, 195, 100, 0.75);
+
+  /* outer border glow ONLY */
+  box-shadow:
+    0 0 8px rgba(230, 195, 100, 0.25),
+    0 0 18px rgba(230, 195, 100, 0.18);
+
+  transform: translateY(-4px);
+}
+
+/* BOOK BUTTON GLOW */
+
+#services .book-btn.glow1 {
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+#services .book-btn.glow1:hover {
+  box-shadow:
+    0 0 10px rgba(230, 195, 100, 0.45),
+    0 0 22px rgba(230, 195, 100, 0.30);
+
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .service-card {
+    padding: 1.8rem;
+  }
+
+  .service-title {
+    font-size: 1.6rem;
+  }
+
+  .service-description {
+    font-size: 0.95rem;
+  }
+
+  .service-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .book-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  #services .carousel-control-prev,
+  #services .carousel-control-next {
+    display: none;
+  }
+}
+
 /* Center Section */
 .s2 {
   flex-direction: column;
